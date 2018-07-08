@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width"=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<style>
+body {margin:0;}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+</head>
+<body style="background-color:powderblue;">
+  <!-- Navigation Bar -->
+
+  <div class="navbar">
+  <a href="#Home">|Home|</a>
+  <a href="about.html">About</a>
+  <a href="current.html">What am I up to?</a>
+  <a href="projects.html">Projects</a>
+  <a href="resume.html">Resume</a>
+</div>
+
+  <!-- Slide show -->
+  <section>
+    <img class="mySlides" src="photoofme4.jpg" style="width:100%">
+    <img class="mySlides" src="3photoofme.jpg" style="width:100%">
+    <img class="mySlides" src="2photoofme.jpg" style="width:100%">
+  </section>
+
+  <!-- JavaScript for slide show -->
+  <script language="javascript">
+  var myIndex = 0;
+  carousel();
+
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for(i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    myIndex++;
+    if(myIndex > x.length) {myIndex = 1}
+    x[myIndex - 1].style.display = "block";
+    setTimeout(carousel, 2000);
+  }
+</script>
+
+<!-- About me section -->
+<section class="w3-container w3-center w3-content" style="max-width:600px">
+  <h2 class="w3-wide">Live More, Worry Less</h2>
+  <p class="w3-opacity"><i>Thank you for visiting my website! Feel free to click around and listed below
+  are some exciting things I have going on right now, check them out!</i></p>
+</section>
+
+  <!-- Smaller articles and sections -->
+  <section class="w3-row-padding w3-center w3-light-grey">
+    <article class="w3-third">
+      <h4>TUNE House 2018-2019 </h4>
+      <a href="http://scholars.tune.com/">Click to learn more!</a>
+      <p></p>
+      <p></p>
+      <img src="photooftune.png" alt="Picture of Tune logo" style="width:100%">
+    </article>
+    <article class="w3-third">
+      <h4>Summer Quarter in Athens and Nafplion 2018</h4>
+      <a href="https://studyabroad.washington.edu/index.cfm?FuseAction=programs.ViewProgram&Program_ID=11164">Click to learn more!</a>
+      <p></p>
+      <p></p>
+      <img src="photoofgreece.jpg" alt="Photo of Greek Island" style="width:100%">
+    </article>
+    <article class="w3-third">
+      <h4> <strong>ONE.</strong></h4>
+      <a href="http://www.wewearone.com"><i>Use code <strong>ramouj</strong> for free shipping!!!</i></a>
+      <p></p>
+      <img src="onelook.jpg" alt="Photo of Ramou in One Apperal" style="width:100%">
+    </article>
+  </section>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-64 w3-center w3-black w3-large">
+    <a href="https://www.facebook.com/ramouj1"><i class="fa fa-facebook-official"></i></a>
+    <a href="https://twitter.com/Ramou_Moo"><i class="fa fa-twitter"></i></a>
+    <a href="https://www.instagram.com/ramou_moo/?hl=en"><i class="fa fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/ramoujallow"><i class="fa fa-linkedin"></i></a>
+    <a href="snapchat.html"><i class="fa fa-snapchat"></i></a>
+    <a href="https://www.youtube.com/channel/UCjRDasKR3DtHvBOong2gqgQ/videos"><i class="fa fa-youtube"></i></a>
+
+</footer>
+</body>
+</html>

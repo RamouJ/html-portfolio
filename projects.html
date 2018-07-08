@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width"=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<style>
+body {margin:0;}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+
+  <div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="current.html">What am I up to?</a>
+  <a href="#projects">|Projects|</a>
+  <a href="resume.html">Resume</a>
+</div>
+
+<div class="main">
+  <h1><em>Ready, Set, Flow</em><h1>
+  <h4><a href="https://myreadysetflow.weebly.com/">Click here to view the prototype website we created!</a></h4>
+<h3>About</h3>
+<p>This project was a part of the Info(Informatics) 200 course at UW Seattle. We found a problem to address,
+came up with a solution for it, and went through the design process in a matter of 10 weeks.</p>
+  <p>"As a group, we decided to focus our knowledge on menstrual education.
+    We worked on making the talk of the flow, flow a little bit easier.
+    Many young women around the world have little to no education about their menstrual cycle before it arrives.
+    We have a solution to help young women start their path to womanhood.
+    Having a period shouldn’t be treated as an inconvenience, and learning about it shouldn’t be either." </p>
+
+
+<!-- Slide show -->
+<section>
+  <img class="mySlides" src="red1.jpg" style="width:100%">
+  <img class="mySlides" src="red2.jpg" style="width:100%">
+  <img class="mySlides" src="red3.jpg" style="width:100%">
+  <img class="mySlides" src="red4.jpg" style="width:100%">
+
+</section>
+
+<!-- JavaScript for slide show -->
+<script language="javascript">
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for(i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if(myIndex > x.length) {myIndex = 1}
+  x[myIndex - 1].style.display = "block";
+  setTimeout(carousel, 2000);
+}
+</script>
+</div>
+
+</body>
+</html>
