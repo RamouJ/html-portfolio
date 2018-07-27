@@ -96,190 +96,62 @@ body {margin:0;}
   <a href="resume.html">Resume</a>
 </div>
 
-  <!-- Slide show -->
-  <style>
-body {
-  font-family: Arial;
-  margin: 0;
-}
+                        <!-- Slide show -->
+  <section>
+    <img class="mySlides" src="photoofme4.jpg" style="width:100%">
+    <img class="mySlides" src="3photoofme.jpg" style="width:100%">
+    <img class="mySlides" src="2photoofme.jpg" style="width:100%">
+  </section>
 
-* {
-  box-sizing: border-box;
-}
+  <!-- JavaScript for slide show -->
+  <script language="javascript">
+  var myIndex = 0;
+  carousel();
 
-img {
-  vertical-align: middle;
-}
-
-/* Position the image container (needed to position the left and right arrows) */
-.container {
-  position: relative;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
-  cursor: pointer;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* Container for image text */
-.caption-container {
-  text-align: center;
-  background-color: #222;
-  padding: 2px 16px;
-  color: white;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Six columns side by side */
-.column {
-  float: left;
-  width: 16.66%;
-}
-
-/* Add a transparency effect for thumnbail images */
-.demo {
-  opacity: 0.6;
-}
-
-.active,
-.demo:hover {
-  opacity: 1;
-}
-</style>
-<body>
-
-<div class="container">
-  <div class="mySlides">
-    <div class="numbertext">1 / 6</div>
-    <img src="slide1.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">2 / 6</div>
-    <img src="slide2.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">4 / 6</div>
-    <img src="slide4.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">5 / 6</div>
-    <img src="slide5.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">6 / 6</div>
-    <img src="slide6.jpg" style="width:100%">
-  </div>
-
-  <a class="prev" onclick="plusSlides(-1)">❮</a>
-  <a class="next" onclick="plusSlides(1)">❯</a>
-
-  <div class="caption-container">
-    <p id="caption"></p>
-  </div>
-
-  <div class="row">
-    <div class="column">
-      <img class="demo cursor" src="slide1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Why frown when you can smile :)">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="slide2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Microsofties for Summer 2017">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="slide4.jpg" style="width:100%" onclick="currentSlide(4)" alt="The port of Mykonos">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="slide5.jpg" style="width:100%" onclick="currentSlide(5)" alt="wewearone.com // code:ramouj">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="slide6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Beach in Crete">
-    </div>
-  </div>
-</div>
-
-<script>
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for(i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    myIndex++;
+    if(myIndex > x.length) {myIndex = 1}
+    x[myIndex - 1].style.display = "block";
+    setTimeout(carousel, 2000);
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}
 </script>
 
-</body>
+<!-- About me section -->
+<section class="w3-container w3-center w3-content" style="max-width:600px">
+  <h2 class="w3-wide">Live More, Worry Less</h2>
+  <p class="w3-opacity"><i>Thank you for visiting my website! Feel free to click around and listed below
+  are some exciting things I have going on right now, check them out!</i></p>
+</section>
+
+  <!-- Smaller articles and sections -->
+  <section class="w3-row-padding w3-center w3-light-grey">
+    <article class="w3-third">
+      <h4>TUNE House 2018-2019 </h4>
+      <a href="http://scholars.tune.com/">Click to learn more!</a>
+      <p></p>
+      <p></p>
+      <img src="photooftune.png" alt="Picture of Tune logo" style="width:100%">
+    </article>
+    <article class="w3-third">
+      <h4>Summer Quarter in Athens and Nafplion 2018</h4>
+      <a href="https://studyabroad.washington.edu/index.cfm?FuseAction=programs.ViewProgram&Program_ID=11164">Click to learn more!</a>
+      <p></p>
+      <p></p>
+      <img src="photoofgreece.jpg" alt="Photo of Greek Island" style="width:100%">
+    </article>
+    <article class="w3-third">
+      <h4> <strong>ONE.</strong></h4>
+      <a href="http://www.wewearone.com"><i>Use code <strong>ramouj</strong> for free shipping!!!</i></a>
+      <p></p>
+      <img src="onelook.jpg" alt="Photo of Ramou in One Apperal" style="width:100%">
+    </article>
+  </section>
+
 
 <!-- About me section -->
 <section class="w3-container w3-center w3-content" style="max-width:600px">
