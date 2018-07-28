@@ -36,6 +36,25 @@ body {margin:0;}
   margin-top: 30px;
   height: 1500px; /* Used in this example to enable scrolling */
 }
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("slide1.jpg");
+
+    /* Full height */
+    height: 50%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}                                                                                                                
+                                                                                                                
 </style>
 </head>
 </head>
@@ -50,30 +69,8 @@ body {margin:0;}
   <a href="resume.html">Resume</a>
 </div>
 
-  <!-- Slide show -->
-  <section>
-    <img class="mySlides" src="photoofme4.jpg" style="width:100%">
-    <img class="mySlides" src="3photoofme.jpg" style="width:100%">
-    <img class="mySlides" src="2photoofme.jpg" style="width:100%">
-  </section>
-
-  <!-- JavaScript for slide show -->
-  <script language="javascript">
-  var myIndex = 0;
-  carousel();
-
-  function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for(i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
-    }
-    myIndex++;
-    if(myIndex > x.length) {myIndex = 1}
-    x[myIndex - 1].style.display = "block";
-    setTimeout(carousel, 2000);
-  }
-</script>
+ 
+<div class="bg"></div>                                        
 
 <!-- About me section -->
 <section class="w3-container w3-center w3-content" style="max-width:600px">
